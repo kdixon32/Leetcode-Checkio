@@ -1,3 +1,3 @@
 #Count If True > False
-def TrueFalse():
+def TrueFalse(items):
   return sum(items) > len(items) / 2
