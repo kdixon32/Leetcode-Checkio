@@ -10,7 +10,7 @@ def twoSum(self, nums, target):
 
     for i, elem in enumerate(nums):
         comp = target - elem
-        if comp in pasval:
-            return [pasval[comp], i]
+        if comp in pastval:
+            return [pastval[comp], i]
         pastval[elem] = i
     return []
