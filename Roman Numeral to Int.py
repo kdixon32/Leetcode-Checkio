@@ -10,8 +10,7 @@
 # >>> print(from_roman_numeral("MMMM"))
 # 4000
 def from_roman_numeral(roman_numeral):
-    inroman = {}
-    
+    inroman = {}    
     inroman["M"] = 1000
     inroman["CM"] = 900
     inroman["D"] = 500
@@ -29,12 +28,11 @@ def from_roman_numeral(roman_numeral):
     romansum = 0
     last = "I"
     arr = list(roman_numeral)
+
     for i in arr[::-1]: #BACKWARDS works better
         if inroman.get(i) < inroman.get(last):
-            romansum -= int(inroman.get(i))
-        
+            romansum -= int(inroman.get(i))      
         else:
            romansum += inroman.get(i)
-           last = i
-           
+           last = i           
     return romansum
